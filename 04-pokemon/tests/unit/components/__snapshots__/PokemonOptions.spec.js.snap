@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonOptions Component Debe de hacer match con el snapshot 1`] = `
+<div class="options-container">
+  <!-- Utilizaremos la api https://pokeapi.co para añadir nombres de diferentes pokemons -->
+  <ul>
+    <!-- $emit: el símbolo de $ es un caracter normal y corriente. ¿Por qué empieza con el símbolo de $? El símbolo de $ representa las propiedades y eventos propios de Vue, para evitar que un desarrollador los utilice.  -->
+    <!-- https://v3.vuejs.org/guide/component-custom-events.html#event-names -->
+    <li>Bulbasaur</li>
+    <li>Ivysaur</li>
+    <li>Venusaur</li>
+    <li>Charmander</li>
+  </ul>
+</div>
+`;

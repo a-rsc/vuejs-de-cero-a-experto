@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Intro</title>
+</head>
+<body>
+    <h1>Hola Mundo!</h1>
+
+    <!-- Control absoluto de este div -->
+    <div id="app">
+        <h1>Hola mundo!</h1>
+        <p>{{ 'Álvaro Rodríguez' }}</p>
+        <p v-text="`Álvaro Rodríguez`"></p>
+        {{ '1' + '1' }}
+    </div>
+
+    <hr>
+
+    <div>
+        <p>No forma parte de la aplicación de VueJs</p>
+        <p>{{ '1' + '1' }}</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="02-app.js"></script>
+</body>
+</html>

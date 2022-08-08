@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Intro</title>
+</head>
+<body>
+    <!-- Control absoluto de este div -->
+    <div id="app">
+        <h1>Hola mundo!</h1>
+        <h2 style="color: red;">{{ message }}</h2>
+        <h3 v-text="quote"></h3>
+        <blockquote>-{{ author }}</blockquote>
+
+        <p>No hace falta parentésis, es el mismo principio que cuando teníamos una promesa y escribiamos... .then( resp => console.log(resp)). Cuando tenemos un argumento en una función, cuyo argumento es el primer y único argumento que se le manda a una función que se ejecuta internamente. Podemos resumirlo como .then( console.log ) </p>
+        <p>Si escribimos changeQuote() el 1r elemento/argumento no es event y es undefined, en cambio si escribimos changeQuote podemos disponer del elemento/argumento event</p>
+        <button v-on:dblclick="changeQuote">
+            Change quote (double click)
+        </button>
+        <hr>
+        <p>El valor por defecto que emite este click es el valor por defecto event en la función...</p>
+        <button @click="changeQuote2">
+            Change quote 2
+        </button>
+        <hr>
+        <button @mouseOver="count++">Count: {{ count }}</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="03-app.js"></script>
+</body>
+</html>

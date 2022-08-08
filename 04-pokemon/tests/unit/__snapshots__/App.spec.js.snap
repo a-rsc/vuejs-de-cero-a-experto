@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Debe de hacer match con el snapshot 1`] = `<page-stub></page-stub>`;

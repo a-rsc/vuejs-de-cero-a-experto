@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Intro</title>
+    <style>
+        blockquote {
+            margin-left: 1rem;
+            color: red;
+        }
+        button {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Control absoluto de este div -->
+    <div id="app">
+        <h1>Batman quotes</h1>
+        <h2>Sin estructurar</h2>
+        <ul v-if="quotes.length > 0">
+            <li v-for="(quote, index) in quotes">
+                <span>{{ `${++index}. ${quote.quote}` }}</span><blockquote v-if="quote.author">-{{ quote.author }}</blockquote>
+            </li>
+        </ul>
+        <h2>Estructurado</h2>
+        <ul v-if="quotes.length > 0">
+            <li v-for="({quote, author}, index) in quotes">
+                <span>{{ `${++index}. ${quote}` }}</span><blockquote>-{{ author }}</blockquote>
+            </li>
+        </ul>
+        <!-- {{ quotes }} -->
+        <hr>
+        <!-- <input type="text" v-model="newQuote.quote" v-on:keypress="AddQuote"> -->
+        <!-- Modificadores de eventos -->
+        <p><a href="https://v3.vuejs.org/guide/events.html#multiple-event-handlers" target="_blank">Modificadores de eventos</a></p>
+        <input type="text" id="quote" v-model="newQuote.quote" v-on:keypress.enter="AddQuote">
+        <button
+          v-on:click="AddQuote">Añadir cita de Batman</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="04-app.js"></script>
+</body>
+</html>

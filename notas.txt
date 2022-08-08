@@ -1,0 +1,115 @@
+npm install -g @vue/cli
+
+--------------------------------------------------------------------------
+sudo npm start
+
+assets: contienen recursos estáticos
+node_modules: módulos que se necesitan cargar
+src: código
+...
+package-lock.json: como se construyeron los módulos de node_modules (propio de npm). Si se hubiera trabajado con yarn aparecería un archivo llamado yarn.lock
+package.json: contiene las dependencias tanto de desarrollo como de producción
+webpack.config.js: le dice a webpack como debe de cargar los módulos...
+
+--------------------------------------------------------------------------
+Sección 4: Vue CLI - Primera aplicación real
+vue --version
+@vue/cli 4.5.12
+
+sudo vue create 03-fundamentos
+    Manually select features
+        Sí Babel (transpila el código al lado de node)
+        Sí Linter / Formatter (pero en este caso no)
+        Sí Unit Testing
+
+        Vue 3.X
+
+        Unit Testing: Sí Jest
+
+        In dedicated config files
+        no
+
+    http://localhost:8080/
+
+--------------------------------------------------------------------------
+45. Estructura de carpetas generada por defecto
+    bundle -> paquete final de la aplicación
+    ...
+    README.md -> indicar que comandos se deben ejectuar para que la aplicación funcione.
+    src/assets/ -> logo.XXXXXX.png webpack ha agregado un hash para forzar el cache
+    src/components/...
+    main.js
+
+--------------------------------------------------------------------------
+import HelloWorld from '@/components/HelloWorld.vue' -> punto de entrada a la carpeta src
+
+New component
+<vue>
+
+--------------------------------------------------------------------------
+Pruebas unitarias y de integración
+    Unitarias: enfocadas en pequeñas funcionalidades
+    Integración: enfocadas en cómo reaccionan varias piezas de conjunto
+
+Características de las pruebas
+    1. fáciles de escribir
+    2. fáciles de leer
+    3. confiables
+    4. rápidas
+    5. principalmente unitarias
+
+AAA
+    Arrange (arreglar)  - preparamos el estado inicial
+    Act     (actuar)    - aplicamos acciones o estímulos
+    Assert  (afirmar)   - observar el comportamiento resultante
+
+Mitos
+    Hacen que mi aplicación no tenga errores - MENTIRA
+    Las pruebas no pueden fallar - MENTIRA
+    Hacen más lenta mi aplicación - MENTIRA (se quedan en desarrollo)
+    Es una pérdida de tiempo - VERDAD/MENTIRA
+    Hay que probar todo - Pfff (como mínimo la ruta crítica)
+    El objetivo es asegurarse que la aplicación funciona como la diseñamos...
+
+Debemos tener la misma estructura de src en tests/unit. En este caso, creamos una carpeta llamada components y dentro los tests de los componentes...
+
+Es importante en las pruebas empezar por los componentes más sencillos.
+
+--------------------------------------------------------------------------
+Pokemon
+
+vue create 04-pokemon
+    Manually select features
+        Sí Babel (transpila el código al lado de node)
+        Sí Linter / Formatter (pero en este caso no)
+        Sí Unit Testing
+
+        Vue 3.X
+
+        Unit Testing: Sí Jest
+
+        In dedicated config files
+        no
+
+    http://localhost:8080/
+
+npm run serve --port=8080
+
+https://www.npmjs.com/package/axios
+npm i axios
+
+Vamos a generar la aplicación de distribución
+package.json -> script "build"
+
+npm run build
+
+
+Se crean 3 files con hash en la carpeta dist. Esto hace que nuestra aplicación de vue se ejecute sin problemas aunque hayan cambios (los navegadores guardan en cache la aplicación o archivos de javascript y css). Entonces, como el hash se modifica, la cache no afecta.
+
+Esta aplicación montada no tiene ningún backend!
+
+--------------------------------------------------------------------------
+test:unit Pokemon
+
+1r pokemonApi.spec.js
+2n getPokemonOptions.spec.js

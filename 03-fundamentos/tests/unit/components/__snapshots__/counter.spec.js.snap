@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Component Debe de hacer match con el snapshot 1`] = `
+<div>
+  <h3>Counter - valor por defecto</h3>
+  <h3>Counter - valor por defecto</h3>
+  <p style="text-align: justify;">Mientras se edita el template se mantiene el estado,es decir, el valor de la variable no se modifica.</p>
+  <p>30</p>
+  <p>30<sup>2</sup> = 900 (no guardado en memoria)</p>
+  <p>30<sup>2</sup> = 900 (no guardado en memoria)</p>
+  <p>30<sup>2</sup> = 900 (no guardado en memoria)</p>
+  <p>30<sup>2</sup> = 900 (no guardado en memoria)</p>
+  <p>30<sup>2</sup> = 900 (guardado en memoria - propiedad computada)</p>
+  <p>30<sup>2</sup> = 900 (guardado en memoria - propiedad computada)</p>
+  <p>30<sup>2</sup> = 900 (guardado en memoria - propiedad computada)</p>
+  <p>30<sup>2</sup> = 900 (guardado en memoria - propiedad computada)</p>
+  <div class="buttons"><button>+ 1</button><button>- 1</button><button>Reset</button></div>
+</div>
+`;

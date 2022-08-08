@@ -1,0 +1,10 @@
+npm i
+
+npm start
+
+Cualquier cambio en index.js se compila de nuevo y se muestra casi instantáneamente gracias a webpack
+
+package-lock.json: configuraciones de los módulos de node
+package.json: dependencias que se necesitan tanto en desarrollo como en producción
+webpack.config.js: como se cargan los módulos y cual es el punto inicial
+
